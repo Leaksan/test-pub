@@ -4,31 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- VOTRE BALISE DE VÉRIFICATION EST ICI -->
+    <!-- Votre balise de vérification -->
     <meta name="6a97888e-site-verification" content="fe6b9b168a5e8dfdaba8f56edcceab11">
     
-    <title>.</title>
+    <title>Accès au contenu</title>
 
-    <!-- 
-      C'EST ICI QUE VOUS COLLEREZ LA BALISE PUBLICITAIRE PRINCIPALE 
-      (le script de Google AdSense, par exemple) UNE FOIS VOTRE SITE APPROUVÉ.
-    -->
-    <script async type="application/javascript" src="https://a.pemsrv.com/ad-provider.js"></script> 
- <ins class="eas6a97888e35" data-zoneid="5691722"></ins> 
- <script>(AdProvider = window.AdProvider || []).push({"serve": {}});</script>
+    <!-- Script principal de la régie pub -->
+    <script async type="application/javascript" src="https://a.pemsrv.com/ad-provider.js"></script>
+
+    <style>
+        /* Style pour centrer le bouton et le rendre bien visible */
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+            font-family: sans-serif;
+        }
+        #actionButton {
+            padding: 20px 40px;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s;
+        }
+        #actionButton:hover {
+            transform: scale(1.05);
+        }
+    </style>
 </head>
 <body>
-<script async type="application/javascript" src="https://a.magsrv.com/ad-provider.js"></script> 
- <ins class="eas6a97888e6" data-zoneid="5691718"></ins> 
- <script>(AdProvider = window.AdProvider || []).push({"serve": {}});</script>
 
-    <script async type="application/javascript" src="https://a.magsrv.com/ad-provider.js"></script> 
- <ins class="eas6a97888e37" data-zoneid="5691720"></ins> 
- <script>(AdProvider = window.AdProvider || []).push({"serve": {}});</script>
-    <!-- 
-      C'EST ICI QUE VOUS PLACEREZ LA BALISE POUR UNE BANNIÈRE SPÉCIFIQUE,
-      SI NÉCESSAIRE.
-    -->
+    <!-- Le bouton sur lequel l'utilisateur doit cliquer -->
+    <button id="actionButton">Cliquez ici pour continuer</button>
+
+    <!-- Vos bannières publicitaires (elles peuvent rester si vous le souhaitez) -->
+    <ins class="eas6a97888e35" data-zoneid="5691722"></ins> 
+    <ins class="eas6a97888e6" data-zoneid="5691718"></ins> 
+    <ins class="eas6a97888e37" data-zoneid="5691720"></ins> 
+    <script>(AdProvider = window.AdProvider || []).push({"serve": {}});</script>
+
+    <!-- Le script qui gère le clic sur le bouton -->
+    <script>
+        // On récupère le bouton grâce à son id
+        const actionButton = document.getElementById('actionButton');
+
+        // On définit l'URL de la publicité (le "Direct Link")
+        // REMPLACEZ CETTE URL PAR CELLE FOURNIE PAR VOTRE RÉGIE PUBLICITAIRE
+        const adUrl = 'https://VOTRE_LIEN_PUBLICITAIRE_DIRECT_ICI.com';
+
+        // On ajoute un "écouteur d'événement" qui attend le clic
+        actionButton.addEventListener('click', function() {
+            // Quand l'utilisateur clique, on ouvre le lien publicitaire dans un nouvel onglet
+            window.open(adUrl, '_blank');
+        });
+    </script>
 
 </body>
 </html>
